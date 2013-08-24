@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>{{site.title}} | {{title}}</title>
+  <link href='http://fonts.googleapis.com/css?family=Kreon:400,700|Cuprum:400,700' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="stylesheet" href="/icons.css"><!--[if IE 7]>
+  <link rel="stylesheet" href="/icons-ie7.css"><![endif]-->
+  <script type="text/javascript" src="/jquery.js"></script>
+  <script type="text/javascript" src="/swipe.js"></script>
+  <script type="text/javascript" src="/slideshow.js"></script>
+  <style>
+
+    /* Swipe 2 required styles */
+
+    #swipe {
+      overflow: hidden;
+      visibility: hidden;
+      position: relative;
+    }
+    #swipe ul {
+      overflow: hidden;
+      position: relative;
+    }
+    #swipe ul > li {
+      float:left;
+      width:100%;
+      position: relative;
+    }
+
+    /* END required styles */
+
+    </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <header class="primary-header">
+      <img id="logo" src="/assets/site-logo.png" /> 
+      <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
+      <h2>Portfolio</h2>
+      <img src="/assets/menu-under-page-title.png" />
+      
+      <ul class="page-menu project-menu">
+        {% if previous %}
+        <li>
+          <a class="thumb-link" href="{{previous.url}}">
+            <img src="{{previous.meta["menu-thumbnail"]}}" />
+            <div>
+              <p>Previous Project</p>
+              {% if previous.meta["tagline"] %}
+              <p class="tagline">
+                - {{previous.meta["tagline"]}} -
+              </p>
+              {% endif %}
+            </div>
+          </a>
+        </li>
+        
+        {% endif %}
+  
+        <img src="/assets/menu-item-separator.png" />
+        {% if next %}
+        <li>
+          <a class="thumb-link" href="{{next.url}}">
+            <img src="{{next.meta["menu-thumbnail"]}}" />
+            <div>
+              <p>Next Project</p>
+              {% if next.meta["tagline"] %}
+              <p class="tagline">
+                - {{next.meta["tagline"]}} -
+              </p>
+              {% endif %}
+            </div>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+      <img src="/assets/menu-under-tag-links.png" alt="">
+      <a id="about"href="/about">About</a>
+      <a href="/contact">Contact Me!</a>
+      <p href="/about">Follow:</p>
+      <ul id="share-list">
+        <li><a href=""><i class="icon-facebook-squared"></i></a></li>
+        <li><a href=""><i class="icon-twitter"></i></a></li>
+        <li><a href=""><i class="icon-pinterest-circled"></i></a></li>
+        <li><a href=""><i class="icon-flickr"></i></a></li>
+        <li><a href=""><i class="icon-instagramm"></i></a></li>
+        <li class="line-break"><a href=""><i class="icon-dribbble"></i></a></li>
+        <li><a href=""><i class="icon-behance"></i></a></li>
+        <li><a href=""><i class="icon-vimeo"></i></a></li>
+        <li><a href=""><i class="icon-youtube-play"></i></a></li>
+      </ul>
+      <img src="/assets/menu-bottom-separator-1.png">
+      <a class="external-link" href="#">Shop</a>
+      <img src="/assets/menu-bottom-separator-2.png">
+      <a class="external-link" href="#">Blog</a>
+      <img src="/assets/menu-bottom-separator-3.png">
+    </header>
+
+    <section class="content">
+
+      <h1 class="content-title">{{title}}</h1>
+      {{body}}
+      
+    </section><!-- /content -->
+  </div><!-- /wrap -->
+</body>
+</html>

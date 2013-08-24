@@ -1,0 +1,390 @@
+body{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.5;
+  border-top: solid 10px #000;
+  margin: 0;
+  color: #000;
+  font-family: 'Kreon';
+}
+
+
+img, video, object{ max-width: 100% }
+
+article, header, nav, section {
+    display: block;
+}
+
+ul{
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2{
+  margin: 0;
+}
+
+
+/* Layout 
+================================ */
+
+.wrap{
+  margin: 60px auto;
+  max-width: 1200px;
+  overflow: hidden;
+  width: 90%;
+}
+
+.primary-header{
+  float: left;
+  width: 30%;
+}
+
+#logo{
+  width: 27px;
+}
+
+.content{
+  float: left;
+  width: 65%;
+  max-width: 640px;
+  padding: 105px 0 0;
+}
+
+
+@media only screen and (max-width: 1085px){
+  body{
+    font-size: 16px;
+  }
+
+  .wrap{
+    margin: 15px auto;
+  }
+
+  .primary-header,  .content{
+    float: none;
+    width: auto;
+  }
+
+}
+
+/* Text 
+================================ */
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+/* Header */
+
+.primary-header{
+  font-size: 0.7em;
+  text-align: center;
+  width: 150px;
+  margin: 0 80px 0 0;
+}
+.primary-header p{
+  margin: 10px 0 0 0;
+  padding: 0 0 7px 0;
+}
+
+.site-title{ 
+  font-size: 18px; 
+  background-image: url(assets/menu-under-title.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%; 
+  margin: 10px 0 10px 0;
+  height: 50px; 
+  text-transform: uppercase;
+}
+
+.page-menu {
+  margin: 0 0 10px;
+  padding: 0;
+  font-family: 'Cuprum';
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#share-list{
+  width: 110px;
+  margin: 10px auto 10px;
+  padding: 0;
+  overflow: hidden;
+}
+#share-list li{
+  width: 17px;
+  height: 17px;
+  float: left;
+  margin: 0px 2px 0;
+  padding: 0;
+}
+#share-list li a {
+  font-size: 15px;
+}
+
+#share-list li a i.icon-facebook-squared{
+  color: #3B5998;
+}
+#share-list li a i.icon-twitter{
+  color: #00aced;
+}
+#share-list li a i.icon-pinterest-circled{
+  color: #cb2027;
+}
+#share-list li a i.icon-flickr{
+  color: #fe0086;
+}
+#share-list li a i.icon-dribbble{
+  color: #e94d8a;
+}
+#share-list li a i.icon-behance{
+  color: #048df2;
+}
+#share-list li a i.icon-vimeo{
+  color: #41b2dc;
+}
+#share-list li a i.icon-youtube-play{
+  color: #CD332D;
+}
+#share-list li.line-break{
+  margin: 0 0 0 10px;
+}
+
+
+
+
+.primary-header h2{
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.primary-header > a{
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  margin: 5px auto;
+  padding: 5px 0 7px;
+  border-bottom: solid 3px #000;
+}
+
+.primary-header > a#about{
+  margin: -2px auto 0px;
+}
+
+
+.primary-header > p{
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: solid 2px #000;
+}
+
+.external-link{
+  border-bottom: 0px !important;
+  margin: 0px auto !important;
+  padding: 0px !important;
+}
+
+.page-menu li{
+  margin: 10px 0 0;
+  line-height: 26px;
+  list-style: none;
+}
+
+.page-menu li.selected, .page-menu li:hover{
+  background-image: url(/assets/menu-item-selected.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px;
+}
+.project-menu{
+  margin-bottom: 10px;
+}
+
+.project-menu li{
+  background-image: none !important;
+}
+
+.page-menu li a.thumb-link{
+  overflow: hidden;
+  position: relative;
+  width: 150px;
+  height: 75px;
+  display: block;
+}
+.page-menu li a.thumb-link div,.page-menu li a.thumb-link img{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.page-menu li a.thumb-link div{
+  display: none;
+  width: 100%;
+}
+
+.page-menu li a.thumb-link p{
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+  line-height: 18px;
+  margin: 20px 0 0 0;
+}
+.page-menu li a.thumb-link p.tagline{
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  text-transform: lowercase;
+  vertical-align: middle;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+
+.page-menu li a.thumb-link:hover div{
+  display: table;
+}
+
+.page-menu li a.thumb-link:hover img{
+  display: none;
+}
+
+.is-current-page{
+  color: #999;
+  pointer-events: none;
+}
+
+/* Content */
+
+.content-title{
+  font-size: 2.4em;
+  line-height: 1.3;
+  margin: 0 0 0.5em;
+}
+
+.post-preview{
+  margin: 1em 0 0;
+  padding: 1em 0 0;
+}
+
+.subpage-menu a{
+  display: inline-block;
+  margin-right: 15px;
+}
+
+
+/*main page*/
+
+.content h1{
+  text-align: center;
+  font-family: 'Kreon', serif;
+  font-size: 16pt;
+}
+
+.content h2{
+  text-align: center;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 15pt;
+  font-weight: normal;
+}
+
+.content p{
+  font-family: 'Georgia', serif;
+  font-size: 12pt;
+}
+
+.main-list li{
+  float: left;
+  overflow: hidden; 
+  width: 205px;
+  height: 105px;
+  margin: 0px 10px 5px 0px;
+}
+
+.list-description{
+  display:none;
+  overflow: hidden;
+  width: 205px;
+  height: 105px;
+  background: #4f3132;
+}
+.list-description p{
+  color: #fff;
+  text-align: center;
+  margin: 5px 10px 0;
+}
+.list-description .white-separator-line{
+  width: 148px;
+  height: 3px;
+  margin: 5px auto;
+  background: #FFF;
+}
+
+.list-description img{
+  margin: 5px auto 5px;
+  width: 148px;
+  display: block;
+}
+
+.list-description .post-item-title{
+  text-transform: uppercase;
+  font-size: 14px; 
+  margin: 12px 0 0 0;
+}
+.list-description .post-item-tagline{
+  font-size: 12px; 
+}
+.list-description .post-item-assets{
+  font-size: 10px; 
+}
+
+
+
+.list-thumbnail{
+  width: 205px;
+  height: 105px;
+  overflow: hidden;
+}
+
+.post-list-item:hover .list-description{
+  display: block;
+}
+.post-list-item:hover .list-thumbnail{
+  display: none;
+}
+
+
+
+/****** BLOG POST GALLERY******/
+#slideshow{
+  position: relative;
+}
+.gallery-nav{
+  width: 18px;
+  height: 9px;
+  background-size: 100%;
+  display: inline-block;
+}
+
+#slideshow #prev{
+  background-image: url(/assets/nav-left.png);
+  margin: 0 10px 0 0;
+}
+
+
+#slideshow #next{
+  background-image: url(/assets/nav-right.png);
+}
+
+#nav{
+  position: absolute;
+  top: -30px;
+  right: 0px;
+}
+
+
+/* I got 99 problems, but this last line ain't one */
