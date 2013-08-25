@@ -1,2 +1,4 @@
-/carolinabuzio.com
-/assets
+#/carolinabuzio.com
+#/assets
+.DS_Store
+*/.DS_Store
