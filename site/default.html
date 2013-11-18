@@ -34,6 +34,14 @@
     /* END required styles */
 
     </style>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#mobile-menu-trigger").click(function (argument) {
+          $(".page-menu").toggle("300");
+        });  
+      });
+    </script>
 </head>
 <body>
 
@@ -101,9 +109,22 @@
       <img src="/assets/menu-bottom-separator-3.png">
     </header>
 
+    <header class="mobile-header">
+      <a href="javascript:void(0);" id="mobile-menu-trigger"> MENU </a>
+      <ul class="page-menu">
+        <li><a href="/site/tags/animation">Animation</a></li>
+        <li class="selected"><a href="/site/tags/illustration">Illustration</a></li>
+        <li><a href="/site/tags/design">Design</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact Me!</a></li>
+      </ul>
+    </header>
+
     <section class="content">
 
-      <h1 class="content-title">{{title}}</h1>
+      <div class="title_section">
+        <h1 class="content-title">{{title}}</h1>
+      </div>
       {{body}}
       
     </section><!-- /content -->

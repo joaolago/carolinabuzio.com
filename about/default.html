@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="/style.css" />
   <link rel="stylesheet" href="/icons.css"><!--[if IE 7]>
   <link rel="stylesheet" href="/icons-ie7.css"><![endif]-->
+  <script type="text/javascript" src="/jquery.js"></script>
   <style type="text/css">
     .content{
       margin: 0;
@@ -28,6 +29,13 @@
     }
 
   </style>
+  <script type="text/javascript">
+      $(document).ready(function() {
+        $("#mobile-menu-trigger").click(function (argument) {
+          $(".page-menu").toggle("300");
+        });  
+      });
+  </script>
 </head>
 <body>
 
@@ -67,6 +75,16 @@
       <img src="/assets/menu-bottom-separator-2.png">
       <a class="external-link" href="#">Blog</a>
       <img src="/assets/menu-bottom-separator-3.png">
+    </header>
+     <header class="mobile-header">
+      <a href="javascript:void(0);" id="mobile-menu-trigger"> MENU </a>
+      <ul class="page-menu">
+        <li><a href="/site/tags/animation">Animation</a></li>
+        <li class="selected"><a href="/site/tags/illustration">Illustration</a></li>
+        <li><a href="/site/tags/design">Design</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact Me!</a></li>
+      </ul>
     </header>
 
     <section class="content">
