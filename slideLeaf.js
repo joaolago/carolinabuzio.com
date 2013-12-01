@@ -68,9 +68,5 @@
         change_selected_item();
       });
     }
-
-    
   };
-
-  
 }( jQuery ));

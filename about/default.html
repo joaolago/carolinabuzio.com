@@ -12,7 +12,6 @@
   <script type="text/javascript" src="/jquery.js"></script>
   <style type="text/css">
     .content{
-      margin: 0;
       padding: 0;
     }
     .content p:nth-of-type(2), .content p:nth-of-type(3){
@@ -24,7 +23,6 @@
     }
     .content img:nth-of-type(1){
       width: 382px;
-      height: 420px;
       margin: 0 auto;
     }
 
@@ -42,10 +40,15 @@
   <div class="wrap">
 
     <header class="primary-header">
-      <img id="logo" src="/assets/site-logo.png" /> 
-      <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
-
-      <h2>Portfolio</h2>
+      <a class="no-bar" href="/">
+        <img id="logo" src="/assets/site-logo.png" /> 
+        <h1 class="site-title">{{site.title}}</h1>
+      </a>
+      <a class="no-bar" href="/">
+        <a class="no-bar" href="/">
+        <h2>Portfolio</h2>
+      </a>
+      </a>
       <img src="/assets/menu-under-page-title.png" />
       <ul class="page-menu">
         <li><a href="/site/tags/animation">Animation</a></li>
@@ -55,20 +58,20 @@
         <li><a href="/site/tags/design">Design</a></li>
         <img src="/assets/menu-item-separator.png" alt="">
       </ul>
-      <img src="/assets/menu-under-tag-links.png" alt="">
+      
       <a id="about"href="/about">About</a>
       <a href="/contact">Contact Me!</a>
-      <p href="/about">Follow:</p>
+      <p>Follow:</p>
       <ul id="share-list">
-        <li><a href=""><i class="icon-facebook-squared"></i></a></li>
-        <li><a href=""><i class="icon-twitter"></i></a></li>
-        <li><a href=""><i class="icon-pinterest-circled"></i></a></li>
-        <li><a href=""><i class="icon-flickr"></i></a></li>
-        <li><a href=""><i class="icon-instagramm"></i></a></li>
+        <li><a href="https://www.facebook.com/carolinabuzioillustration/"><i class="icon-facebook-squared"></i></a></li>
+        <li><a href="https://twitter.com/CarolinaBuzio/"><i class="icon-twitter"></i></a></li>
+        <li><a href="http://pinterest.com/carolinabuzio/"><i class="icon-pinterest-circled"></i></a></li>
+        <li><a href="http://www.flickr.com/photos/carolinabuzio/"><i class="icon-flickr"></i></a></li>
+        <li><a href="http://instagram.com/cbuzio/"><i class="icon-instagramm"></i></a></li>
         <li class="line-break"><a href=""><i class="icon-dribbble"></i></a></li>
-        <li><a href=""><i class="icon-behance"></i></a></li>
-        <li><a href=""><i class="icon-vimeo"></i></a></li>
-        <li><a href=""><i class="icon-youtube-play"></i></a></li>
+        <li><a href="http://dribbble.com/CarolinaBuzio/"><i class="icon-behance"></i></a></li>
+        <li><a href="https://vimeo.com/carolinabuzio"><i class="icon-vimeo"></i></a></li>
+        <li><a href="http://www.youtube.com/CBuzio/"><i class="icon-youtube-play"></i></a></li>
       </ul>
       <img src="/assets/menu-bottom-separator-1.png">
       <a class="external-link" href="#">Shop</a>
@@ -83,7 +86,12 @@
         <li class="selected"><a href="/site/tags/illustration">Illustration</a></li>
         <li><a href="/site/tags/design">Design</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact Me!</a></li>
+        <hr>
+<li><a href="/contact">Contact Me!</a></li>
+        <li><a class="external-link" href="#">Shop</a></li>
+        <li><a class="external-link" href="#">Blog</a></li>
+        <li><a class="external-link" href="#">Shop</a></li>
+        <li><a class="external-link" href="#">Blog</a></li>log</a></li>
       </ul>
     </header>
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>{{site.title}} | {{title}}</title>
-  <link href='http://fonts.googleapis.com/css?family=Kreon:400,700|Cuprum:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Kreon:400,700|Cuprum:400,700' rel='stylesheet' type='text/css'>
   <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
   <link rel="stylesheet" type="text/css" href="/style.css" />
   <link rel="stylesheet" href="/icons.css"><!--[if IE 7]>
@@ -47,9 +47,13 @@
 
   <div class="wrap">
     <header class="primary-header">
-      <img id="logo" src="/assets/site-logo.png" /> 
-      <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
-      <h2>Portfolio</h2>
+      <a class="no-bar" href="/">
+        <img id="logo" src="/assets/site-logo.png" /> 
+        <h1 class="site-title">{{site.title}}</h1>
+      </a>
+      <a class="no-bar" href="/">
+        <h2>Portfolio</h2>
+      </a>
       <img src="/assets/menu-under-page-title.png" />
       
       <ul class="page-menu project-menu">
@@ -87,20 +91,20 @@
         </li>
         {% endif %}
       </ul>
-      <img src="/assets/menu-under-tag-links.png" alt="">
+      
       <a id="about"href="/about">About</a>
       <a href="/contact">Contact Me!</a>
-      <p href="/about">Follow:</p>
+      <p>Follow:</p>
       <ul id="share-list">
-        <li><a href=""><i class="icon-facebook-squared"></i></a></li>
-        <li><a href=""><i class="icon-twitter"></i></a></li>
-        <li><a href=""><i class="icon-pinterest-circled"></i></a></li>
-        <li><a href=""><i class="icon-flickr"></i></a></li>
-        <li><a href=""><i class="icon-instagramm"></i></a></li>
+        <li><a href="https://www.facebook.com/carolinabuzioillustration/"><i class="icon-facebook-squared"></i></a></li>
+        <li><a href="https://twitter.com/CarolinaBuzio/"><i class="icon-twitter"></i></a></li>
+        <li><a href="http://pinterest.com/carolinabuzio/"><i class="icon-pinterest-circled"></i></a></li>
+        <li><a href="http://www.flickr.com/photos/carolinabuzio/"><i class="icon-flickr"></i></a></li>
+        <li><a href="http://instagram.com/cbuzio/"><i class="icon-instagramm"></i></a></li>
         <li class="line-break"><a href=""><i class="icon-dribbble"></i></a></li>
-        <li><a href=""><i class="icon-behance"></i></a></li>
-        <li><a href=""><i class="icon-vimeo"></i></a></li>
-        <li><a href=""><i class="icon-youtube-play"></i></a></li>
+        <li><a href="http://dribbble.com/CarolinaBuzio/"><i class="icon-behance"></i></a></li>
+        <li><a href="https://vimeo.com/carolinabuzio"><i class="icon-vimeo"></i></a></li>
+        <li><a href="http://www.youtube.com/CBuzio/"><i class="icon-youtube-play"></i></a></li>
       </ul>
       <img src="/assets/menu-bottom-separator-1.png">
       <a class="external-link" href="#">Shop</a>
@@ -116,7 +120,10 @@
         <li class="selected"><a href="/site/tags/illustration">Illustration</a></li>
         <li><a href="/site/tags/design">Design</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact Me!</a></li>
+        <hr>
+<li><a href="/contact">Contact Me!</a></li>
+        <li><a class="external-link" href="#">Shop</a></li>
+        <li><a class="external-link" href="#">Blog</a></li>
       </ul>
     </header>
 
@@ -125,6 +132,15 @@
       <div class="title_section">
         <h1 class="content-title">{{title}}</h1>
       </div>
+      {% if meta.vimeo.value %}
+        <figure class="video">
+          <iframe src="//player.vimeo.com/video/{{meta.vimeo.value}}?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </figure>
+      {% elsif meta.youtube.value %}
+        <figure class="video">
+          <iframe src="//www.youtube.com/embed/{{meta.youtube.value}}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+        </figure>
+      {% endif %}
       {{body}}
       
     </section><!-- /content -->
