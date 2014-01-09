@@ -58,6 +58,10 @@ hr{
   padding: 195px 0 0;
 }
 
+.content.main{
+  padding: 90px 0 0;
+}
+
 .mobile-header{
   display: none;
 }
@@ -310,7 +314,7 @@ a.no-bar{
 
 .main-list li{
   float: left;
-  overflow: hidden; 
+  overflow: hidden;
   width: 205px;
   height: 105px;
   margin: 0px 10px 5px 0px;
@@ -357,7 +361,7 @@ a.no-bar{
 
 .list-thumbnail{
   width: 205px;
-  height: 105px;
+  /*height: 105px;*/
   overflow: hidden;
 }
 
@@ -440,9 +444,27 @@ figure.video iframe{
 }
 
 
+/********** ABOUT PAGE ***********/
+.about li{
+  font-size: 12pt;
+  font-weight: normal;
+  font-family: "Georgia", serif;
+}
+.about li:before{
+  content: "▶";
+  font-size: 7pt;
+}
 
-/* I got 99 problems, but this last line ain't one */
+.about p:nth-of-type(10){
+  font-size: 16pt;
+}
 
+.about a, .about a:hover, .about a:visited{
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+/*********************************/
 
 @media only screen and (max-width: 1000px){
   body{
@@ -464,6 +486,9 @@ figure.video iframe{
     float: none;
     margin: 10px auto;
     padding: 110px 0 0;
+  }
+  .content.main{
+    padding: 20px 0 0;
   }
 
   .mobile-header{

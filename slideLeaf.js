@@ -34,10 +34,10 @@
     if($theList.filter(function () {return $(this).find('li').find('img').length > 0;}).children().length > 0){
       $theList.wrap('<div id="swipe" />');
       $('#swipe').wrap('<div id="slideshow"/>');
-      
+
       $('#slideshow').append('<div id="nav"/>');
       $('#nav').append('<div id="prev" class="gallery-nav"/>');
-      
+
       if(settings.showPagination){
         $('#nav').append('<div id="pages"/>');
         
@@ -67,6 +67,11 @@
         window.mySwipe.next();
         change_selected_item();
       });
+      $('#swipe').click(function () {
+        window.mySwipe.next();
+        change_selected_item();
+      });
+
     }
-  };
+  };  
 }( jQuery ));
