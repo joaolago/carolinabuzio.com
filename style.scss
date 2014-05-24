@@ -55,11 +55,10 @@ hr{
 .content{
   float: left;
   max-width: 645px;
-  padding: 191px 0 0;
+  padding: 195px 0 0;
 }
 
 .content.main{
-  max-width: 870px;
   padding: 90px 0 0;
 }
 
@@ -80,7 +79,7 @@ a{
 /* Header */
 
 .primary-header{
-  font-size: 10pt;
+  font-size: 0.7em;
   text-align: center;
   width: 150px;
   margin: 0 80px 0 0;
@@ -92,9 +91,10 @@ a{
 
   
 .site-title{ 
-  font-size: 11pt; 
-  margin: 3px 0 0 0;
-  height: 20px; 
+  font-size: 18px; 
+  border-bottom: solid 3px #000;
+  margin: 3px 0 10px 0;
+  height: 32px; 
   text-transform: uppercase;
 }
 
@@ -103,7 +103,7 @@ a{
   padding: 0;
   font-family: 'Cuprum';
   text-transform: uppercase;
-  font-size: 11pt;
+  font-size: 16px;
   border-bottom: solid 3px #000;
 }
 
@@ -158,7 +158,7 @@ a{
 .primary-header h2{
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 16pt;
+  font-size: 20px;
 }
 
 .primary-header > a{
@@ -166,7 +166,7 @@ a{
   text-transform: uppercase;
   display: block;
   margin: 0 auto;
-  padding: 7px 0 3px;
+  padding: 5px 0 3px;
   border-bottom: solid 3px #000;
 }
 
@@ -192,7 +192,7 @@ a.no-bar{
 
 .page-menu li{
   margin: 10px 0 0;
-  line-height: 13px;
+  line-height: 10px;
   list-style: none;
 }
 
@@ -262,18 +262,19 @@ a.no-bar{
 /* Content */
 .title_section{
   margin: -105px 0 0 0;
+}
+
+.title_section{
   border-top: solid 2px black;
   border-bottom: solid 2px black;
   margin: -105px 0 50px 0;
-  padding: 15px 0 0;
+  padding: 10px 0 0;
 }
 
 .content-title{
   font-size: 2.4em;
   line-height: 1.3;
   margin: 0 0 0.5em;
-  text-transform: uppercase;
-  font-weight: normal;
 }
 
 .post-preview{
@@ -291,7 +292,7 @@ a.no-bar{
 
 .content h1{
   text-align: center;
-  font-family: 'Cuprum', serif;
+  font-family: 'Kreon', serif;
   font-size: 16pt;
 }
 
@@ -305,7 +306,6 @@ a.no-bar{
 .content p{
   font-family: 'Georgia', serif;
   font-size: 12pt;
-  line-height: 20pt;
 }
 
 .content p a{
@@ -315,30 +315,26 @@ a.no-bar{
 .main-list li{
   float: left;
   overflow: hidden;
-  width: 280px;
-  height: 144px;
+  width: 205px;
+  height: 105px;
   margin: 0px 10px 5px 0px;
 }
 
 .list-description{
-  position: absolute;
-  top: 145px;
+  display:none;
   overflow: hidden;
-  width: 280px;
-  height: 144px;
+  width: 205px;
+  height: 105px;
   background: #000;
-  background: rgba(0,0,0,0.8);
-  z-index: 1;
 }
 .list-description p{
   color: #fff;
   text-align: center;
   margin: 5px 10px 0;
-  line-height: 14pt;
 }
 .list-description .white-separator-line{
   width: 148px;
-  height: 2px;
+  height: 3px;
   margin: 5px auto;
   background: #FFF;
 }
@@ -351,41 +347,29 @@ a.no-bar{
 
 .list-description .post-item-title{
   text-transform: uppercase;
-  font-family: "Kreon", serif;
-  font-size: 16px; 
-  margin: 35px 0 0 0;
+  font-size: 14px; 
+  margin: 12px 0 0 0;
 }
 .list-description .post-item-tagline{
-  font-family: "Georgia", serif;
-  font-size: 14px; 
+  font-size: 12px; 
 }
 .list-description .post-item-assets{
-  text-transform: uppercase;
-  font-family: "Cuprum", sans-serif;
-  font-size: 12px; 
+  font-size: 10px; 
 }
 
 
 
 .list-thumbnail{
-  width: 280px;
-  height: 144px;
+  width: 205px;
+  /*height: 105px;*/
   overflow: hidden;
-  position: relative;
 }
 
-.post-list-item{
-  position: relative;
+.post-list-item:hover .list-description{
+  display: block;
 }
-
-@media (min-width: 1000px) {
-  .post-list-item:hover .list-description{
-    top: 0px;
-  }
-  .post-list-item:hover .list-thumbnail{
-    display: block;
-
-  }
+.post-list-item:hover .list-thumbnail{
+  display: none;
 }
 
 
@@ -444,16 +428,12 @@ a.no-bar{
   color: #000;
 }
 
-#slideshow ul li{
-  cursor: pointer;
-}
-
 figure.video{
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   padding-top: 25px;
   height: 0;
-  margin: 0 0 55px 0;
+  margin: 0;
 }
 
 figure.video iframe{
@@ -464,85 +444,31 @@ figure.video iframe{
   height: 100%;
 }
 
-figure.issuu{
-  width: 100%;
-  margin: 0;
-}
-
 
 /********** ABOUT PAGE ***********/
-.about a, .about a:hover, .about a:visited{
-  text-decoration: underline;
-}
+.about{
+  li{
+    font-size: 12pt;
+    font-weight: normal;
+    font-family: "Georgia", serif;
 
-.content h2{
-  font-size: 14pt;
-}
-.about li{
-  font-size: 12pt;
-  font-weight: normal;
-  font-family: "Georgia", serif;
-}
-.about li:before{
-  content: "▶";
-  font-size: 7pt;
-}
+    &:before{
+      content: "▶";
+      font-size: 7pt;
+    }
+  }
 
-.about p:nth-of-type(13){
-  font-size: 16pt;
-  font-style: italic;
-}
+  p:nth-of-type(10){
+    font-size: 16pt;
+  }
 
-.about p:nth-of-type(2), .about p:nth-of-type(3){
-  margin: 0 auto 10px;
-  padding: 0;
-}
-
-.about p:nth-of-type(4) {
-  margin: 10px auto;
-}
-
-.about p:nth-of-type(5){
-  font-size: 15pt;
-  font-family: "Georgia", serif;
-  font-style: italic;
-}
-.about p:nth-of-type(6){
-  font-size: 15pt;
-  font-family: "Georgia", serif;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.about p:nth-of-type(6) a, .about p:nth-of-type(6) a:hover, .about p:nth-of-type(6) a:visited{
-  color: #000;
-}
-
-.about p:nth-of-type(2) img, .about p:nth-of-type(3) img, .about p:nth-of-type(4) img{
-  width: 191px !important;
-  margin: 0 auto;
-  display: block;
-}
-.about p:nth-of-type(2) img, .about p:nth-of-type(4) img{
-  height: 2px;
-}
-
-.contact p:nth-of-type(1) img, .contact p:nth-of-type(2) img{
-  width: 191px !important;
-  margin: 0 auto;
-  display: block;
-}
-.contact p:nth-of-type(1) img{
-  height: 2px;
+  a, a:hover, a:visited{
+    font-weight: bold;
+    text-decoration: none !important;
+  }
 }
 
 /*********************************/
-
-@media only screen and (max-width: 1225px){
-  .content.main{
-    width: 600px;
-  }
-}
 
 @media only screen and (max-width: 1000px){
   body{
@@ -564,9 +490,10 @@ figure.issuu{
     float: none;
     margin: 10px auto;
     padding: 110px 0 0;
-  }
-  .content.main{
-    padding: 20px 0 0;
+
+    &.main{
+      padding: 20px 0 0;
+    }
   }
 
   .mobile-header{
@@ -575,11 +502,12 @@ figure.issuu{
   .page-menu{
     display: none;
     border: 0;
+
+    li {
+      margin: 15px 0;
+    }
   }
 
-  .page-menu li {
-    margin: 15px 0;
-  }
 
   .main-list{
     overflow: hidden;
@@ -594,21 +522,13 @@ figure.issuu{
 
 @media only screen and (max-width: 716px){
   .main-list{
+    width: 430px;
     margin: 0 auto;
-    width: 280px; 
-  }
-
-  .content.main{
-    width: 100%;
   }
 }
 @media only screen and (max-width: 460px){
-  .content.main{
-    width: 100%;
-  }
-
   .main-list{
-    width: 280px;
+    width: 205px;
     margin: 0 auto;
   }
 
