@@ -55,6 +55,7 @@ hr{
 .content{
   float: left;
   max-width: 645px;
+  width: 100%;
   padding: 191px 0 0;
 }
 
