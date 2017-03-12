@@ -1,0 +1,46 @@
+<div class="content">
+  {% if type == 'post' %}
+    {% if meta.vimeo.value %}
+      <div class="feat-video-wrap">
+        <iframe src="//player.vimeo.com/video/{{meta.vimeo.value}}?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      </div>
+    {% elsif meta.youtube.value %}
+      <div class="feat-video-wrap">
+        <iframe src="//www.youtube.com/embed/{{meta.youtube.value}}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    {% elsif assets.size > 0 %}
+      <div class="feat-image-wrap">
+        <img src="{{ assets.first.url }}" alt="{{ title }}" class="feat-image" />
+      </div>
+    {% endif %}
+  {% endif %}
+
+
+  <h1 class="title padded">{{ title }}</h1>
+
+  {% if pages.size > 0 %}
+    <div class="subpages padded">
+      {% for page in pages %}
+        <a href="{{page.url}}">{{page.title}}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="body padded">
+    {{ body }}
+
+    
+  </div>
+
+  {% if type == 'post' and (next or previous) %}
+    <div class="post-nav">
+      {% if previous %}
+        <a href="{{ previous.url }}" class="post-nav-link previous">&larr; {{ previous.title }}</a>
+      {% endif %}
+
+      {% if next %}
+        <a href="{{ next.url }}" class="post-nav-link next">{{ next.title }} &rarr;</a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

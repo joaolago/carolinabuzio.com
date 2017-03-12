@@ -1,0 +1,339 @@
+@import 'toolbox'
+
+*
+  +box-sizing(border-box)
+
+html
+  border-left: solid 14px #f0fd81
+  border-right: solid 14px #f0fd81
+
+body
+  font-family: $ff_sans
+  font-size: $fs_body
+  color: $tc_main
+  padding: 0
+  margin: 0
+  line-height: 1.4
+
+img, video, object, embed, audio
+  max-width: 100%
+
+.wrap
+  margin: 90px auto
+  width: 100%
+  max-width: $w_max_wrap
+
+h1,h2,h3,h4,h5
+  margin-top: 0
+  padding: 0
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+a
+  color: $tc_main
+
+.siteleaf-credit
+  display: block
+  font-size: 12px
+  color: $tc_light
+  text-align: center
+  margin: $gutter 0
+
+  a
+    color: $tc_light
+
+.post-body, .body
+  line-height: 1.5
+
+
+.button
+  display: inline-block
+  text-align: center
+  background-color: $bg_dark
+  color: #fff
+  border-radius: 3px
+  padding: 15px 20px
+  text-decoration: none
+  font-weight: bold
+
+  &:hover
+    background: $bg_dark_hover
+
+
+// Header
+// ================================================
+.header-logo
+  width: 45px
+
+.primary-header
+  text-align: center
+  margin: $gutter 0
+
+  h1
+    font-size: 60px
+    margin: 0
+
+    +max-width($bp_fs_adjust)
+      font-size: 36px
+
+    a
+      text-decoration: none
+
+.subhead 
+  margin: 0px 0px 20px
+  font-style: italic
+
+.nav-menu
+  font-size: $fs_body_small
+
+  a
+    font-style: italic
+    text-transform: uppercase
+    text-decoration: none
+    color: $tc_light
+    display: inline-block
+    margin: 0 4px
+
+    &.is-current-page
+      color: $tc_main
+
+    &:hover
+      color: $tc_main
+      text-decoration: underline
+
+
+// Post listing pages
+// ================================================
+.post-listing
+  +clearfix
+
+.page-summary
+  margin: 0 auto $gutter
+  max-width: 720px
+  text-align: left
+
+.about
+  display: flex
+  flex-direction: row
+
+.about-left
+  flex: 1
+  padding: 0 15px
+
+.about-right
+  flex: 2
+
+body .social h2
+  margin-bottom: 5px
+
+.share-list
+  display: flex
+  flex-direction: row
+  
+  li a
+    font-size: 25px
+
+  li a i.icon-facebook-squared
+    color: #3B5998
+
+  li a i.icon-twitter
+    color: #00aced
+
+  li a i.icon-pinterest-circled
+    color: #cb2027
+
+  li a i.icon-flickr
+    color: #fe0086
+
+  li a i.icon-dribbble
+    color: #e94d8a
+
+  li a i.icon-behance
+    color: #048df2
+
+  li a i.icon-vimeo
+    color: #41b2dc
+
+  li a i.icon-youtube-play
+    color: #CD332D
+
+
+
+.view-all-button
+  margin: $gutter auto
+  width: 90%
+  max-width: 300px
+  display: block
+
+.post-preview
+  width: 33%
+  padding: $gutter / 2
+  // border: 1px solid $border_color
+  float: left
+
+  +max-width(700px)
+    width: 50%
+
+  +max-width(500px)
+    width: 100%
+    padding: 15px
+
+  .post-body
+    margin: 0
+    color: $tc_light
+
+.post-title
+  font-size: 18px
+  margin: 10px 0
+
+  a
+    text-decoration: none
+
+
+// Archives
+// ================================================
+.post-listing-item
+  display: block
+  margin: 0 auto 15px
+  padding: 30px
+  border: 1px solid $border_color
+  max-width: 700px
+  text-decoration: none
+
+  &:hover
+    background-color: $bg_dark
+    color: #fff
+
+.post-listing-title
+  +ellipsis
+  font-size: 20px
+  display: block
+  margin: 0
+
+.post-listing-date
+  font-size: $fs_body_small
+  color: $tc_light
+
+
+// Page / post content
+// ================================================
+.content
+  max-width: 900px
+  margin: $gutter auto 0
+
+  .padded
+    max-width: 800px
+    margin: auto
+    padding-left: $gutter
+    padding-right: $gutter
+
+  .title
+    padding-top: $gutter
+
+  .body
+    padding-bottom: $gutter
+
+  +max-width($bp_fs_adjust)
+    .title, .body
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
+
+    .title
+      padding-top: $gutter / 2
+
+    .body
+      padding-bottom: $gutter / 2
+
+.title
+  font-size: 30px
+  +max-width($bp_fs_adjust)
+    font-size: 20px
+
+.subpages
+  margin: 5px 0 20px
+  font-size: $fs_body_small
+
+  a
+    display: inline-block
+    margin-right: 5px
+
+.body
+  font-size: 18px
+
+  h1, h2
+    font-size: 20px
+    margin: 2em 0 0.7em
+    line-height: 1.3
+
+  h3
+    font-size: 18px
+
+  +max-width($bp_fs_adjust)
+    font-size: 14px
+
+
+.feat-image-wrap
+  text-align: center
+
+.feat-video-wrap
+  position: relative
+  padding-bottom: 56.25%
+  height: 0
+
+  iframe
+    position: absolute
+    top: 0
+    left: 0 
+    width: 100%
+    height: 100%
+
+
+.tagset
+  font-size: 14px
+
+.tag
+  text-decoration: none
+
+  &:after
+    content: ', '
+
+  &:last-child:after
+    content: ''
+
+  &:hover
+    color: $tc_light
+
+.post-nav
+  +clearfix
+
+.post-nav-link
+  +ellipsis
+  color: #000
+  text-decoration: none
+  display: inline-block
+  width: 50%
+  padding: 15px 30px
+  float: left
+
+  &.next
+    float: right
+    text-align: right
+  &.previous
+    text-align: left
+
+  &:hover
+    background: $bg_yellow_hover
+
+@media screen and (max-width: 600px)
+  .wrap
+    margin: 20px auto
+  .primary-header
+    margin: 20px 0
+
+  .about
+    padding: 0 15px
+    display: block
+  .about-left
+    display: none
