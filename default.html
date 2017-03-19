@@ -7,9 +7,22 @@
   <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
   <link rel="stylesheet" type="text/css" href="/styles/css/global.css" />
   <script src="//use.edgefonts.net/source-sans-pro.js"></script>
+  <link rel="shortcut icon" type="image/png" rel="icon" href="assets/favicon.png"/>
   <link rel="stylesheet" href="/icons.css"><!--[if IE 7]>
   <link rel="stylesheet" href="/icons-ie7.css"><![endif]-->
   {% if site.meta.head %}{{ site.meta.head }}{% endif %}
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48089366-1', 'carolinabuzio.com');
+      ga('send', 'pageview', {
+      'title' : '{{title}}'
+    });
+  </script>
 </head>
 <body>
   {% if site.meta.body_top %}{{ site.meta.body_top }}{% endif %}
@@ -17,7 +30,7 @@
   <div class="wrap">
 
     <header class="primary-header">
-      <img class="header-logo" src="/assets/site-logo.png">
+      <a href="/"><img class="header-logo" src="/assets/site-logo.png"></a>
       <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
       <p class="subhead">illustrator and animator</p>
       <nav class="nav-menu">
@@ -35,7 +48,7 @@
     {% elsif type == 'page' and body != '' %}
       <div class="page-summary body about">
         <div class="about-left">
-          <img src="/assets/about.jpg" alt="">
+          <img src="{{ assets.first.url }}" alt="">
         </div>
         <div class="about-right">
           {{ body }}
